@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio - Création graphique // Maxandre Dufour</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaqueries.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Nunito:wght@200&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Nunito:wght@200;400&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <nav id="desktop-nav">
+            <div class="logo">Maxandre Dufour</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#a-propos">A propos</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">Maxandre Dufour</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#a-propos" onclick="toggleMenu()">A propos</a></li>
+                    <li><a href="#projets" onclick="toggleMenu()">Projets</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="container">
+                <div id="description">
+                    <h1>Former graphic designer, <br><span>still in love with art.</span></h1>
+                    <p>                       
+                        Bonjour, je suis Maxandre Dufour et je suis ravi de vous accueillir ici.
+                        Après plusieurs années en tant que graphiste au sein d'une entreprise lyonnaise, j'ai décidé de devenir développeur web.
+                        À travers de site, je souhaitais mettre en lumière divers projets que j'ai réalisé. 
+                    </p>
+                </div>
+                <div id="ma-photo">
+                    <img id="photo-moi" src="assets/1636037514888.jpeg" alt="photo-maxandre-dufour">
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,178 @@
+/* Général */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Nunito";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* Transition */
+
+a, .btn {
+    transition: all 300ms ease;
+}
+
+/* Navigation */
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    margin: 20px;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.2rem;  
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color:red;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: "Croissant One";
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* Menu hamburger */
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 300ms ease;
+}
+
+.menu-links{
+    position: absolute;
+    top:100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+    display : block;
+    padding : 10px ;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links li a {
+    font-size: 1rem;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+    opacity: 1;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px)
+}
+
+.hamburger-icon.open :nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px)
+}
+
+/* Section */ 
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px 600px;
+}
+
+#description {
+    margin-right: 50px;
+}
+
+#description h1 {
+    font-family: "Croissant One";
+    margin: 0px 30px 30px 0px;
+    font-size: 3.2rem;
+}
+
+#description h1 span{
+    color: black;
+    background-color:  rgb(255, 237, 36);
+    padding: 0px 10px;
+}
+
+#description p{
+    margin-right: 180px;
+    text-align: justify;
+}
+
+#photo-moi {
+    border-radius: 48% 52% 68% 32% / 30% 47% 53% 70%;
+    width: 80vh;
+    border: rgb(255, 237, 36) 5px solid;
+}
+
