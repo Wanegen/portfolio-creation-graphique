@@ -140,39 +140,86 @@ a:hover {
     transform: rotate(-45deg) translate(10px, -5px)
 }
 
-/* Section */ 
+/* Section */   
 
 .container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 150px 600px;
+    align-content: center;
+    width: 55%;
+    margin: 100px auto;
 }
 
 #description {
-    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ma-photo {
+    display: flex;
+    width: 400px;
+    height: 400px;
 }
 
 #description h1 {
     font-family: "Croissant One";
-    margin: 0px 30px 30px 0px;
     font-size: 3.2rem;
 }
 
 #description h1 span{
     color: black;
     background-color:  rgb(255, 237, 36);
-    padding: 0px 10px;
+    padding: 0px 15px;
 }
 
 #description p{
-    margin-right: 180px;
+    width: 80%;
     text-align: justify;
+    padding: 30px 0px;
 }
 
 #photo-moi {
     border-radius: 48% 52% 68% 32% / 30% 47% 53% 70%;
-    width: 80vh;
     border: rgb(255, 237, 36) 5px solid;
 }
 
+/* Boutons */ 
+
+#boutons {
+    display: flex;
+    gap: 2rem;
+}
+
+#bouton-projet, #bouton-contact {
+    font-family: "Nunito";
+    font-size: 1rem;
+    padding: 12px 25px 12px 30px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+}
+
+#bouton-projet {
+    background-color: rgb(255, 237, 36);
+    color: black;
+}
+
+#bouton-projet img {
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+}
+
+#bouton-contact img {
+    width: 25px;
+    height: 25px;
+    padding-left: 15px;
+}
+
+#bouton-contact {
+    background-color: black;
+    color: rgb(255, 237, 36);
+}
