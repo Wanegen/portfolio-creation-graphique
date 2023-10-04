@@ -48,8 +48,8 @@ a {
 }
 
 a:hover {
-    color:red;
-    text-decoration: underline;
+    color: rgb(211, 192, 45);
+    text-decoration: none;
     text-underline-offset: 0.5rem;
 }
 
@@ -191,10 +191,14 @@ a:hover {
     gap: 2rem;
 }
 
+#boutons a {
+    text-decoration: none;
+}
+
 #bouton-projet, #bouton-contact {
     font-family: "Nunito";
     font-size: 1rem;
-    padding: 12px 25px 12px 30px;
+    padding: 12px 20px 12px 25px;
     font-weight: bolder;
     border: none;
     border-radius: 60px;
@@ -208,18 +212,23 @@ a:hover {
 }
 
 #bouton-projet img {
-    width: 25px;
-    height: 25px;
-    padding-left: 5px;
-}
-
-#bouton-contact img {
-    width: 25px;
-    height: 25px;
-    padding-left: 15px;
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
 }
 
 #bouton-contact {
     background-color: black;
     color: rgb(255, 237, 36);
+}
+
+#bouton-contact img {
+    width: 25px;
+    height: 25px;
+    padding-left: 7px;
+}
+
+#bouton-contact:hover, #bouton-projet:hover {
+    transition: all 0.3s ease-in-out;
+    transform: rotate(-4deg) translate(-3px, -7px)
 }
