@@ -4,3 +4,13 @@ function toggleMenu() {
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
+
+let imageFiltre = document.getElementById("photo-moi");
+
+    imageFiltre.addEventListener("mouseover", () => {
+        document.imageFiltre.src = "assets/1636037514888-filtre.jpeg";
+    })
+
+    imageFiltre.addEventListener("mouseout", () => {
+        document.imageFiltre.src = "assets/1636037514888.jpeg";
+    })
