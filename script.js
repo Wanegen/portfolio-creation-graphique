@@ -8,9 +8,9 @@ function toggleMenu() {
 let imageFiltre = document.getElementById("photo-moi");
 
     imageFiltre.addEventListener("mouseover", () => {
-        document.imageFiltre.src = "assets/1636037514888-filtre.jpeg";
+        document.imageFiltre.src = "assets/images/1636037514888-filtre.jpeg";
     })
 
     imageFiltre.addEventListener("mouseout", () => {
-        document.imageFiltre.src = "assets/1636037514888.jpeg";
+        document.imageFiltre.src = "assets/images/1636037514888.jpeg";
     })
