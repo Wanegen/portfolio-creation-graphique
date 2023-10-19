@@ -1,4 +1,4 @@
-/* -----------------------Général----------------------- */
+/* ------------------------Général------------------------ */
 
 * {
     padding: 0;
@@ -14,10 +14,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* -----------------------Transition----------------------- */
-
-
-/* -----------------------Navigation----------------------- */
+/* ------------------------Navigation------------------------ */
 
 nav {
     background-color: black;
@@ -56,7 +53,7 @@ nav a:visited {
 }
 
 nav a:hover {
-    color: rgb(130, 130, 130);
+    color: rgb(255, 237, 36);
     text-decoration: underline;
     text-underline-offset: 0.3rem;
 }
@@ -74,10 +71,40 @@ nav a:hover {
     transition: all 0.2s ease-out;
 }
 
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
 
-/* -----------------------Section description et photo----------------------- */
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
 
-/* -----------------------1. Section description----------------------- */
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links li a {
+    font-size: 1rem;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+/* ------------------------Section description et photo------------------------ */
 
 .container-description {
     margin: auto 20px;
@@ -96,11 +123,16 @@ nav a:hover {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     color: white;
 }
 
-#description p{
-    width: 200px;
+#description p {
+    font-size: 1em;
+    text-align: center;
+    margin: 30px;
+    line-height: 150%;
+    width: 70%;
 }
 
 #description h1 {
@@ -138,7 +170,7 @@ from {
 }
 
 to {
-    width: 100%
+    width: 70%
 }
 }
 
@@ -148,15 +180,6 @@ to {
 }
 }
 
-#description p {
-    font-size: 1.1rem;
-    text-align: center;
-    margin: 30px;
-    line-height: 150%;
-}
-
-/* -----------------------2. Section photo----------------------- */
-
 #ma-photo {
     flex: 1;
     display: flex;
@@ -165,26 +188,29 @@ to {
 }
 
 #photo-moi {
+    object-fit: cover;
     width: 400px;
     height: 400px;
     margin: 40px 200px 40px 0px;
     border-radius: 48% 52% 68% 32% / 30% 47% 53% 70%;
     border: rgb(255, 237, 36) 5px solid;
+    
 }
 
 #photo-moi:hover {
     transition: all 0.2s ease-in-out;
 }
 
-/* -----------------------Section projets----------------------- */
+/* ------------------------Section projets------------------------ */
 
 .container-projets {
     margin: auto 20px;
+    padding-bottom: 20px;
     background-color: black;
     border-radius: 1rem;
     position: relative;
     top: 130px;
-    height: 3000px;
+    height: 2550px;
     z-index: 3;
 }
 
@@ -193,6 +219,7 @@ to {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px;
     padding-top: 70px;
+    padding-bottom: 20px;
 }
 
 #tri {
@@ -218,6 +245,7 @@ to {
 #projets-titre h2 {
     font-family: "Croissant One";
     margin-left: 60px;
+    font-size: 3rem;
 }
 
 #projets-titre h3 {
@@ -349,16 +377,84 @@ to {
     height: 40px;
 }
 
-/* -----------------------Boutons hover image projets----------------------- */
+/* ------------------------Section contact------------------------ */
+
+.container-contact {
+    padding-top: 35px;
+    margin: 30px 20px 160px 20px;
+    background-color: black;
+    border-radius: 1rem;
+    position: relative;
+    top: 130px;
+    height: 280px;
+    z-index: 5;
+}
+
+#titre-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#titre-contact h2 {
+    font-family: "Croissant One";
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#titre-contact h3 {
+    color: white;
+    font-size: 1.2em;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#bloc-contact {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    gap: 3em;
+}
+
+#bloc-contact h4{
+    font-size: 1.2em;
+}
+
+#bloc-localisation, #bloc-mail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+    border-radius: 40px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+#bloc-localisation:hover, #bloc-mail:hover {
+    border: 2px solid rgb(255, 237, 36);
+    transition: all 0.2s ease-in-out;
+}
+
+#bloc-contact a {
+    text-decoration: none;
+    color: white;
+}
+
+#icon-localisation, #icon-mail {
+    padding-right: 10px;
+}
+
+/* ------------------------Boutons------------------------ */
 
 #boutons {
     gap: 2rem;
     display: flex;
     justify-content: center;
-}
-
-#boutons a {
-    text-decoration: none;
 }
 
 #bouton-projet,

@@ -1,0 +1,22 @@
+@media screen and (max-width: 1750px) {
+    .container-description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #description {
+        margin: 30px 0px 0px 0;
+        z-index: 2;
+    }
+
+    #description p{
+        width: 40%;
+    }
+
+    #ma-photo {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        z-index: 0;
+    }
+}

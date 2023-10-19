@@ -5,8 +5,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portfolio - Création graphique // Maxandre Dufour</title>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="mediaqueries.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/mediaqueries.css" />
+        <link rel="stylesheet" href="assets/css/lightbox.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -20,29 +21,15 @@
             <div>
                 <ul class="nav-links">
                     <li><a href="#a-propos">A propos</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#titre-tri-projets">Projets</a></li>
+                    <li><a href="#container-contact">Contact</a></li>
                 </ul>
-            </div>
-        </nav>
-        <nav id="hamburger-nav">
-            <div class="logo">Maxandre Dufour</div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                    <li><a href="#a-propos" onclick="toggleMenu()">A propos</a></li>
-                    <li><a href="#projets" onclick="toggleMenu()">Projets</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                </div>
             </div>
         </nav>
         <section class="container-description">
             <div id="description">
                 <h1>
+                    <!-- Séparation en 2 spans car effet sur le second -->
                     <span>
                         Ancien graphiste,</span>
                     <span>
@@ -50,26 +37,28 @@
                     </span>
                 </h1>
                 <p>
-                    Bonjour, je suis <strong>Maxandre Dufour</strong> et je suis
-                    ravi de vous
-                    accueillir ici. <br> Après plusieurs années en tant que
+                    Bonjour, je suis <strong>Maxandre Dufour</strong> et je vis
+                    à Lyon.
+                    <br> Après plusieurs années en tant que
                     graphiste print et web au sein de plusieurs structures,
-                    j'ai décidé de devenir développeur web.
+                    j'ai décidé de devenir développeur Front-end. Ce site est
+                    une
+                    vitrine de quelques-unes de mes anciennes créations.
                 </p>
                 <div id="boutons">
-                    <a href="#">
-                        <button id="bouton-projet">
-                            Mes projets
-                            <img src="assets/icon-projet.svg" alt="icon-projet"
-                                id="icon-projet" />
-                        </button>
+                    <a href="https://www.linkedin.com/in/maxandre-dufour/"
+                        target="_blank">
+                        <img src="assets/images/icons8-linkedin.svg"
+                            alt="logo-linkedin" id="logo-linkedin" />
                     </a>
-                    <a href="#">
-                        <button id="bouton-contact">
-                            Contactez-moi
-                            <img src="assets/icon-contact.svg"
-                                alt="icon-contact" id="icon-contact" />
-                        </button>
+                    <a href="https://github.com/Wanegen" target="_blank">
+                        <img src="assets/images/icons8-github-64.png"
+                            alt="logo-github" id="logo-github" />
+                    </a>
+                    <a href="https://www.behance.net/maxandreDFR"
+                        target="_blank">
+                        <img src="assets/images/icons8-behance.svg"
+                            alt="logo-behance" id="logo-behance" />
                     </a>
                 </div>
             </div>
@@ -226,7 +215,7 @@
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-flyer.jpg"
                             title="Voir le projet sur Behance"
-                            alt="image-brochure">
+                            alt="image-flyer">
                         <a target="_blank"
                             href="https://www.behance.net/gallery/96985827/EURO-2020-Flyer"
                             title="Découvrir le projet sur Behance">
@@ -260,7 +249,7 @@
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-fake-webdesign.jpg"
                             title="Voir le projet sur Behance"
-                            alt="image-brochure">
+                            alt="image-faux-projet-webdesign">
                         <a target="_blank"
                             href="https://www.behance.net/gallery/97346705/HOT-SOCKS-Webdesign"
                             title="Découvrir le projet sur Behance">
@@ -290,9 +279,9 @@
                 </div>
                 <div class="projet">
                     <div class="div-projet-img">
-                        <img src="assets/images/img-projet-fake-webdesign.jpg"
+                        <img src="assets/images/img-projet-identitevisuelle.jpg"
                             title="Voir le projet sur Behance"
-                            alt="image-brochure">
+                            alt="image-identite-visuelle">
                         <a target="_blank"
                             href="https://www.behance.net/gallery/182481923/DEFI-FUJI-Brand-identity"
                             title="Découvrir le projet sur Behance">
@@ -302,14 +291,58 @@
                         </a>
                     </div>
                     <div class="div-description-projet">
-                        <h3>Webdesign de <br>projet fake</h3>
-                        <p>Durant mes études en création numérique & UX Design,
-                            j'ai webdesigné un site vitrine d'une fausse
-                            entreprise qui
-                            vend des chaussettes chauffantes.<br><br>
-                            Yep, le projet n'est pas vendeur et c'est justement
-                            pour ça que j'ai décidé de jouer avec un côté
-                            décalé.
+                        <h3>Identité visuelle</h3>
+                        <p> Bien qu'annulé, j'ai été très heureux de réaliser
+                            à ce projet incroyable. Certains anciens
+                            collaborateurs s'étaient
+                            lancés le pari de réaliser un ultra-trail au tracé
+                            unique sur le Mont Fuji, au
+                            Japon. <br><br> Pour mettre à bien ce projet, j'ai
+                            décidé de créer une identité visuelle complète en
+                            reprenant notamment des codes iconographiques de la
+                            culture japonaise. Par la suite, j'ai décliné cette
+                            dernière pour de divers supports (emailing,
+                            vêtements, Insta...).<br><br>L'identité visuelle est
+                            visionnable <a
+                                href="https://www.behance.net/gallery/182481923/DEFI-FUJI-Brand-identity"
+                                target="_blank">ici</a> et le compte instagram
+                            est disponible <a
+                                href="https://www.instagram.com/defifuji_bypiman/"
+                                target="_blank">là</a>.
+                        </p>
+                        <div class="div-logiciels">
+                            <h5>Projet créé avec</h5>
+                            <img src="assets/images/adobe-photoshop.png"
+                                title="Adobe Photoshop" alt="logo-photoshop">
+                            <img src="assets/images/adobe-indesign.png"
+                                title="Adobe Indesign" alt="logo-indesign">
+                            <img src="assets/images/adobe-illustrator.png"
+                                title="Adobe Illustrator" alt="logo-illustrator">
+                        </div>
+                    </div>
+                </div>
+                <div class="projet">
+                    <div class="div-projet-img">
+                        <img src="assets/images/img-projet-webdesgin.jpg"
+                            title="Cliquez pour agrandir"
+                            alt="image-webdesign">
+                        <a href="assets/images/maquette-page-groupeOL.jpg"
+                            data-lightbox="image-1">
+                            <div class="container-hover">
+                                <button>Cliquez pour agrandir</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="div-description-projet">
+                        <h3>Maquettage page <br>site e-commerce</h3>
+                        <p>Lors de ma première expérience pro, j'ai accompagné
+                            la webdesigneuse sur le
+                            projet de création de page type des prestations
+                            réalisées par la structure dans laquelle j'étais.
+                            <br><br> Voici donc le maquettage que j'ai réalisé
+                            via Photoshop & Sketch en reprenant le style des
+                            pages de l'époque donc : header/titre/3
+                            blocs/formulaire de contact/fond.
                         </p>
                         <div class="div-logiciels">
                             <h5>Projet créé avec</h5>
@@ -322,8 +355,38 @@
                 </div>
             </div>
         </section>
-        <script src="script.js"></script>
+        <section class="container-contact" id="container-contact">
+            <div id="titre-contact">
+                <h2> Contactez-moi</h2>
+                <h3> Je check mes mails très souvent, même la nuit (c'est faux) !</h3>
+            </div>
+            <div id="bloc-contact">
+                <a href="https://youtu.be/CS7fwV--c3c?si=ZLJCP5M2xQP8ar6J" target="_blank">
+                <div id="bloc-localisation">
+                    <div id="icon-localisation">
+                        <img src="assets/images/icon-location.svg" alt="icone-contact">
+                    </div>
+                    <div class="texte-contact">
+                        <h4>Localisation</h4>
+                        <p>Lyon, France</p>
+                    </div>
+                </div>
+                </a>
+                <a href="mailto:maxandre.dufour@gmail.com">
+                <div id="bloc-mail">
+                    <div id="icon-mail">
+                        <img src="assets/images/icon-contact.svg" alt="icone-localisation">
+                    </div>
+                    <div class="texte-contact">
+                        <h4>Mail</h4>
+                        <p>maxandre.dufour@gmail.com</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </section>
+        <script src="assets/scripts/script.js"></script>
+        <script src="assets/scripts/lightbox-plus-jquery.js"></script>
     </body>
 
 </html>
-
