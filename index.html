@@ -21,12 +21,12 @@
             <div>
                 <ul class="nav-links">
                     <li><a href="#a-propos">A propos</a></li>
-                    <li><a href="#titre-tri-projets">Projets</a></li>
+                    <li><a href="#container-projets">Projets</a></li>
                     <li><a href="#container-contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        <section class="container-description">
+        <section class="container-description" id="a-propos">
             <div id="description">
                 <h1>
                     <!-- Séparation en 2 spans car effet sur le second -->
@@ -67,15 +67,22 @@
                     name="imageFiltre" alt="photo-maxandre-dufour" />
             </div>
         </section>
-        <section class="container-projets">
+        <section class="container-projets" id="container-projets">
             <div id="titre-tri-projets">
                 <div id="projets-titre">
                     <h2> Mes créations graphiques</h2>
                     <h3> Création de documents imprimés, fil de réseaux sociaux,
                         webdesign... </h3>
                 </div>
-                <div id="tri">
-                    <button>Trier par</button>
+                <div class="filtre-projet">
+                    <input type="checkbox" name="adobePhotoshop" value="adobePhotoshop" id="adobePhotoshop">
+                    <label for="adobePhotoshop">Adobe Photoshop</label>
+                    <input type="checkbox" name="adobeIndesign" value="adobeIndesign" id="adobeIndesign">
+                    <label for="adobeIndesign">Adobe Indesign</label>
+                    <input type="checkbox" name="adobeIllustrator" value="adobeIllustrator" id="adobeIllustrator">
+                    <label for="adobeIllustrator">Adobe Illustrator</label>
+                    <input type="checkbox" name="sketch" value="sketch" id="sketch">
+                    <label for="sketch">Sketch</label>
                 </div>
             </div>
             <div class="grid-container">
@@ -150,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projet">
+                <div class="projet adobeIllustrator">
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-reseaux.jpg"
                             title="Voir le projet sur Behance"
@@ -179,7 +186,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projet">
+                <div class="projet adobeIllustrator">
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-brochure.jpg"
                             title="Voir le projet sur Behance"
@@ -358,30 +365,34 @@
         <section class="container-contact" id="container-contact">
             <div id="titre-contact">
                 <h2> Contactez-moi</h2>
-                <h3> Je check mes mails très souvent, même la nuit (c'est faux) !</h3>
+                <h3> Je check mes mails très souvent, même la nuit (c'est faux)
+                    !</h3>
             </div>
             <div id="bloc-contact">
-                <a href="https://youtu.be/CS7fwV--c3c?si=ZLJCP5M2xQP8ar6J" target="_blank">
-                <div id="bloc-localisation">
-                    <div id="icon-localisation">
-                        <img src="assets/images/icon-location.svg" alt="icone-contact">
+                <a href="https://youtu.be/CS7fwV--c3c?si=ZLJCP5M2xQP8ar6J"
+                    target="_blank">
+                    <div id="bloc-localisation">
+                        <div id="icon-localisation">
+                            <img src="assets/images/icon-location.svg"
+                                alt="icone-contact">
+                        </div>
+                        <div class="texte-contact">
+                            <h4>Localisation</h4>
+                            <p>Lyon, France</p>
+                        </div>
                     </div>
-                    <div class="texte-contact">
-                        <h4>Localisation</h4>
-                        <p>Lyon, France</p>
-                    </div>
-                </div>
                 </a>
                 <a href="mailto:maxandre.dufour@gmail.com">
-                <div id="bloc-mail">
-                    <div id="icon-mail">
-                        <img src="assets/images/icon-contact.svg" alt="icone-localisation">
+                    <div id="bloc-mail">
+                        <div id="icon-mail">
+                            <img src="assets/images/icon-contact.svg"
+                                alt="icone-localisation">
+                        </div>
+                        <div class="texte-contact">
+                            <h4>Mail</h4>
+                            <p>maxandre.dufour@gmail.com</p>
+                        </div>
                     </div>
-                    <div class="texte-contact">
-                        <h4>Mail</h4>
-                        <p>maxandre.dufour@gmail.com</p>
-                    </div>
-                </div>
                 </a>
             </div>
         </section>
