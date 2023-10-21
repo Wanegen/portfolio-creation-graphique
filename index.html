@@ -33,7 +33,7 @@
                     <span>
                         Ancien graphiste,</span>
                     <span>
-                        Développeur en devenir.
+                        Développeur <br> en devenir.
                     </span>
                 </h1>
                 <p>
@@ -45,7 +45,7 @@
                     une
                     vitrine de quelques-unes de mes anciennes créations.
                 </p>
-                <div id="boutons">
+                <div id="description-boutons">
                     <a href="https://www.linkedin.com/in/maxandre-dufour/"
                         target="_blank">
                         <img src="assets/images/icons8-linkedin.svg"
@@ -74,19 +74,81 @@
                     <h3> Création de documents imprimés, fil de réseaux sociaux,
                         webdesign... </h3>
                 </div>
-                <div class="filtre-projet">
-                    <input type="checkbox" name="adobePhotoshop" value="adobePhotoshop" id="adobePhotoshop">
-                    <label for="adobePhotoshop">Adobe Photoshop</label>
-                    <input type="checkbox" name="adobeIndesign" value="adobeIndesign" id="adobeIndesign">
-                    <label for="adobeIndesign">Adobe Indesign</label>
-                    <input type="checkbox" name="adobeIllustrator" value="adobeIllustrator" id="adobeIllustrator">
-                    <label for="adobeIllustrator">Adobe Illustrator</label>
-                    <input type="checkbox" name="sketch" value="sketch" id="sketch">
-                    <label for="sketch">Sketch</label>
+                <div id="filtre-projets">
+                    <div id="titre-filtres">
+                        <h4>Trier par logiciels utilisés &nbsp; ↓</h4>
+                    </div>
+                    <div id="btn-container">
+                        <div class="checkbox-wrapper-33">
+                            <label class="checkbox">
+                                <input class="checkbox__trigger visuallyhidden"
+                                    type="checkbox" id="adobePhotoshop" />
+                                <span class="checkbox__symbol">
+                                    <svg aria-hidden="true"
+                                        class="icon-checkbox" width="28px"
+                                        height="28px" viewBox="0 0 28 28"
+                                        version="1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 14l8 7L24 7"></path>
+                                    </svg>
+                                </span>
+                                <p class="checkbox__textwrapper">Adobe Photoshop</p>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrapper-33">
+                            <label class="checkbox">
+                                <input class="checkbox__trigger visuallyhidden"
+                                    type="checkbox" id="adobeIndesign" />
+                                <span class="checkbox__symbol">
+                                    <svg aria-hidden="true"
+                                        class="icon-checkbox" width="28px"
+                                        height="28px" viewBox="0 0 28 28"
+                                        version="1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 14l8 7L24 7"></path>
+                                    </svg>
+                                </span>
+                                <p class="checkbox__textwrapper">Adobe Indesign</p>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrapper-33">
+                            <label class="checkbox">
+                                <input class="checkbox__trigger visuallyhidden"
+                                    type="checkbox" id="adobeIllustrator" />
+                                <span class="checkbox__symbol">
+                                    <svg aria-hidden="true"
+                                        class="icon-checkbox" width="28px"
+                                        height="28px" viewBox="0 0 28 28"
+                                        version="1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 14l8 7L24 7"></path>
+                                    </svg>
+                                </span>
+                                <p class="checkbox__textwrapper">Adobe
+                                    Illustrator</p>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrapper-33">
+                            <label class="checkbox">
+                                <input class="checkbox__trigger visuallyhidden"
+                                    type="checkbox" id="sketch" />
+                                <span class="checkbox__symbol">
+                                    <svg aria-hidden="true"
+                                        class="icon-checkbox" width="28px"
+                                        height="28px" viewBox="0 0 28 28"
+                                        version="1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 14l8 7L24 7"></path>
+                                    </svg>
+                                </span>
+                                <p class="checkbox__textwrapper">Sketch</p>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-container">
-                <div class="projet">
+                <div class="filterDiv adobePhotoshop adobeIndesign adobeIllustrator">
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-impertinente.jpg"
                             title="Voir le projet sur Behance"
@@ -123,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projet">
+                <div class="filterDiv adobeIndesign adobeIllustrator">
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-HP.jpg"
                             title="Voir le projet sur Behance"
@@ -157,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projet adobeIllustrator">
+                <div class="filterDiv adobePhotoshop">
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-reseaux.jpg"
                             title="Voir le projet sur Behance"
@@ -186,7 +248,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projet adobeIllustrator">
+                <div class="filterDiv adobeIndesign adobeIllustrator">
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-brochure.jpg"
                             title="Voir le projet sur Behance"
@@ -218,7 +280,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projet">
+                <div class="filterDiv adobePhotoshop adobeIndesign adobeIllustrator">
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-flyer.jpg"
                             title="Voir le projet sur Behance"
@@ -252,7 +314,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projet">
+                <div class="filterDiv adobePhotoshop sketch">
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-fake-webdesign.jpg"
                             title="Voir le projet sur Behance"
@@ -284,7 +346,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projet">
+                <div class="filterDiv adobePhotoshop adobeIndesign adobeIllustrator">
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-identitevisuelle.jpg"
                             title="Voir le projet sur Behance"
@@ -309,13 +371,11 @@
                             reprenant notamment des codes iconographiques de la
                             culture japonaise. Par la suite, j'ai décliné cette
                             dernière pour de divers supports (emailing,
-                            vêtements, Insta...).<br><br>L'identité visuelle est
-                            visionnable <a
+                            vêtements, Insta...).<br><br>Découvrez <a
                                 href="https://www.behance.net/gallery/182481923/DEFI-FUJI-Brand-identity"
-                                target="_blank">ici</a> et le compte instagram
-                            est disponible <a
+                                target="_blank">l'identité visuelle</a> <br>et le <a
                                 href="https://www.instagram.com/defifuji_bypiman/"
-                                target="_blank">là</a>.
+                                target="_blank">compte instagram</a>.
                         </p>
                         <div class="div-logiciels">
                             <h5>Projet créé avec</h5>
@@ -328,7 +388,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projet">
+                <div class="filterDiv adobePhotoshop sketch">
                     <div class="div-projet-img">
                         <img src="assets/images/img-projet-webdesgin.jpg"
                             title="Cliquez pour agrandir"
@@ -359,6 +419,10 @@
                                 title="Sketch" alt="logo-sketch">
                         </div>
                     </div>
+                </div>
+                <div class="divNoFilter">
+                    <p>Aucun projet ne correspond à cette recherche. <br>
+                        Essayez avec d'autres filtres !</p>
                 </div>
             </div>
         </section>

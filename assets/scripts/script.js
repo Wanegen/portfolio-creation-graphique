@@ -15,41 +15,49 @@ imageFiltre.addEventListener("mouseout", () => {
     document.imageFiltre.src = "assets/images/1636037514888.jpeg";
 })
 
+// Création d'une fonction pour filtrer les éléments avec l'appel d'un event (e)
+const filterToggle = (e) => {
+    // On recherche tous les input étant des checkbox qui sont cochés.
+    // On les place ensuite dans un "réseau" comprenant les ID des éléments présents dans les checkbox cochées.
+    const checkedFilters = [...document.querySelectorAll('input[type="checkbox"]:checked')].map(
+        (el) => el.id
+    ),
+        // On créé alors un "réseau" comprenant les éléments de cette NodeList qui matchent avec la classe '.filterDiv'.
+        toFilter = [...document.querySelectorAll('.filterDiv')];
 
-const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
-const allProjets = Array.from(document.querySelectorAll('.projet'));
-const checked = {};
+    // S'il n'y a aucun filtre coché, on fait apparaître tout les éléments 
+    if (checkedFilters.length === 0) {
+        // On itère (recherche en boucle) dans le "réseau" grâce à la fonction anonyme forEach() pour mettre à jour le display en "flex".
+        toFilter.forEach(
+            (el) => el.style.display = 'flex'
+        )
+    } else {
+        // Si plusieurs checkbox sont cochées, on itère d'abord dans les éléments ayant la classe '.filterDiv' pour tous les cacher.
+        toFilter.forEach(
+            (el) => el.style.display = 'none'
+        );
 
-getChecked('adobePhotoshop');
-getChecked('adobeIndesign');
-getChecked('adobeIllustrator');
-getChecked('sketch');
 
-Array.prototype.forEach.call(allCheckboxes, function (el) {
-    el.addEventListener('change', toggleCheckbox);
-});
+        // On créé ensuite un nouveau "réseau" depuis le "réseau" des checkedFilters en utilisant .map
+        let selector = checkedFilters.map(
+            // On utilise ici un littéral de gabarit pour créer une chaîne de caractères de '.filterDiv.<filter-id>'
+            // On ajoute checkedFilters.join('.') au lieu de ${f} afin de n'avoir que les éléments ayant les bonnes checkbox cochées qui apparaissent.
+            (f) => `.filterDiv.${checkedFilters.join('.')}`
+            // On joint ensuite les éléments du "réseau" de sélecteurs ensemble, dans une chaîne de caractères, en utilisant .join et une virgule (',').
+        ).join(',');
+        // On utilise ici document.querySelectorAll() avec le sélecteur créé et on itère dans cette NodeList en utilisant .forEach() 
+        // pour mettre à jour le display de tous les éléments qui matchent avec le sélecteur dans le but de tous les afficher.
+        document.querySelectorAll(selector).forEach(
+            (el) => el.style.display = 'flex'
+        );
+    };
+};
 
-function toggleCheckbox(e) {
-    getChecked(e.target.name);
-    setVisibility();
-}
+// Ici on recherche les checkbox 
+filters = document.querySelectorAll('input[type=checkbox]');
 
-function getChecked(name) {
-    checked[name] = Array.from(document.querySelectorAll('input[name=' + name + ']:checked')).map(function (el) {
-        return el.value;
-    });
-}
-
-function setVisibility() {
-    allProjets.map(function (el) {
-        const adobePhotoshop = checked.adobePhotoshop.length ? _.intersection(Array.from(el.classList), checked.adobePhotoshop).length : true;
-        const adobeIndesign = checked.adobeIndesign.length ? _.intersection(Array.from(el.classList), checked.adobeIndesign).length : true;
-        const adobeIllustrator = checked.adobeIllustrator.length ? _.intersection(Array.from(el.classList), checked.adobeIllustrator).length : true;
-        const sketch = checked.sketch.length ? _.intersection(Array.from(el.classList), checked.sketch).length : true;
-        if (adobePhotoshop && adobeIndesign && adobeIllustrator && sketch) {
-            el.style.display = 'block';
-        } else {
-            el.style.display = 'none';
-        }
-    })
-}
+// On itère au sein des checkbox en utilisant forEach()
+filters.forEach(
+    // Ainsi qu'avec une fonction anonyme pour faire de la fonction filterToggle() l'évenement qui gère l'événement 'change'.
+    (f) => f.addEventListener('change', filterToggle)
+);

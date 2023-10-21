@@ -26,7 +26,7 @@ nav {
     left: 0;
     padding: 25px 50px;
     border-bottom: rgb(255, 237, 36) 1px solid;
-    box-shadow:  0 5px rgba(0,0,0,.09);
+    box-shadow: 0 5px rgba(0, 0, 0, .09);
     z-index: 999;
 }
 
@@ -61,8 +61,8 @@ nav a:hover {
 .logo {
     color: white;
     font-size: 1.4rem;
-    font-weight: bold;
-    font-family: "Croissant One";
+    font-weight: light;
+    letter-spacing: 0.1em;
 }
 
 .logo:hover {
@@ -136,14 +136,19 @@ nav a:hover {
     width: 70%;
 }
 
+#description br {
+    display: none;
+}
+
+
 #description h1 {
     display: flex;
     width: 100%;
     flex-direction: column;
-    letter-spacing: -2px ;
+    letter-spacing: -2px;
 }
 
-#description h1 span:first-child{
+#description h1 span:first-child {
     display: flex;
     justify-content: center;
     font-family: "Croissant One";
@@ -151,7 +156,7 @@ nav a:hover {
     color: white;
 }
 
-#description h1 span:nth-child(2){
+#description h1 span:nth-child(2) {
     font-family: "Croissant One";
     font-size: 3.2rem;
     overflow: hidden;
@@ -160,25 +165,27 @@ nav a:hover {
     padding: 0px 15px;
     border-right: 0.15em solid white;
     white-space: nowrap;
-    animation: typing 2.5s steps(30), /*effet de taper*/
-    blink-caret 0.9s step-end infinite; /*effet du curseur qui clignote*/
+    animation: typing 2.5s steps(30),
+        /*effet de taper*/
+        blink-caret 0.9s step-end infinite;
+    /*effet du curseur qui clignote*/
     align-self: center;
 }
 
 @keyframes typing {
-from {
-    width: 0
-}
+    from {
+        width: 0
+    }
 
-to {
-    width: 70%
-}
+    to {
+        width: 75%
+    }
 }
 
 @keyframes blink-caret {
-50% {
-    border-color: transparent;
-}
+    50% {
+        border-color: transparent;
+    }
 }
 
 #ma-photo {
@@ -195,7 +202,7 @@ to {
     margin: 40px 200px 40px 0px;
     border-radius: 48% 52% 68% 32% / 30% 47% 53% 70%;
     border: rgb(255, 237, 36) 5px solid;
-    
+
 }
 
 #photo-moi:hover {
@@ -219,21 +226,20 @@ to {
 /* ------------------Titre projets------------------ */
 
 #titre-tri-projets {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px;
     padding-top: 70px;
     padding-bottom: 20px;
+    display: flex;
 }
 
-#projets-titre h2, h3 {
+#projets-titre h2,
+h3 {
     color: white;
 }
 
 #projets-titre h2 {
-    font-family: "Croissant One";
+    font-family: "Red Hat Display";
     margin-left: 60px;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 #projets-titre h3 {
@@ -242,10 +248,17 @@ to {
     margin: 10px 0px 0px 60px;
 }
 
-/* ------------------Bouton tri projet------------------ */
+#filtre-projets {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin: auto;
+    margin-right: 60px;
+}
 
-.filtre-projet {
-    color: white;
+#titre-filtres h4:first-child{
+    color: rgb(255, 236, 37);
+    margin-bottom: 20px;
 }
 
 /* ------------------Grid projets------------------ */
@@ -259,7 +272,7 @@ to {
     grid-gap: 60px;
 }
 
-.projet {
+.filterDiv {
     border: 2px solid rgb(255, 237, 36);
     border-radius: 10px;
     display: flex;
@@ -267,24 +280,26 @@ to {
     width: 100%;
 }
 
-.projet strong:last-child {
+.filterDiv strong:last-child {
     color: rgb(255, 237, 36);
-    font-family: "Croissant One";
 }
 
-.projet:nth-child(3) .div-description-projet strong {
+.filterDiv:nth-child(3) .div-description-projet strong {
     color: rgb(255, 237, 36);
-    font-family: "Croissant One";
 }
 
-.projet h3 {
+.filterDiv h3 {
     font-size: 30pt;
     font-family: "Croissant One";
     line-height: 110%;
 }
 
-.projet p {
+.filterDiv p {
     text-align: center;
+}
+
+.divNoFilter {
+    display: none;
 }
 
 .div-projet-img {
@@ -357,6 +372,7 @@ to {
 
 .div-description-projet h3 {
     font-size: 25pt;
+    font-family: "Red Hat Display";
 }
 
 .div-description-projet p {
@@ -367,7 +383,7 @@ to {
     margin-bottom: 10px;
 }
 
-.div-logiciels img{
+.div-logiciels img {
     padding: 0px 5px;
     width: 40px;
     height: 40px;
@@ -382,7 +398,7 @@ to {
     border-radius: 1rem;
     position: relative;
     top: 130px;
-    height: 280px;
+    height: 240px;
     z-index: 5;
 }
 
@@ -407,7 +423,7 @@ to {
 }
 
 #bloc-contact {
-    margin: 50px;
+    margin: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -416,11 +432,12 @@ to {
     gap: 3em;
 }
 
-#bloc-contact h4{
+#bloc-contact h4 {
     font-size: 1.2em;
 }
 
-#bloc-localisation, #bloc-mail {
+#bloc-localisation,
+#bloc-mail {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -431,7 +448,8 @@ to {
     border: 2px solid rgb(0, 0, 0);
 }
 
-#bloc-localisation:hover, #bloc-mail:hover {
+#bloc-localisation:hover,
+#bloc-mail:hover {
     border: 2px solid rgb(255, 237, 36);
     transition: all 0.2s ease-in-out;
 }
@@ -441,13 +459,22 @@ to {
     color: white;
 }
 
-#icon-localisation, #icon-mail {
+#icon-localisation,
+#icon-mail {
     padding-right: 10px;
 }
 
+#icon-localisation img,
+#icon-mail img {
+    width: 45px;
+    height: 45px;
+}
+
+
+
 /* ------------------------Boutons------------------------ */
 
-#boutons {
+#description-boutons {
     gap: 2rem;
     display: flex;
     justify-content: center;
@@ -502,4 +529,138 @@ to {
     position: relative;
     visibility: hidden;
     top: -250px;
+}
+
+/* ------------------Bouton tri projet------------------ */
+
+#btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    border: 1px rgb(224, 207, 25) solid;
+    padding: 20px;
+}
+
+.checkbox-wrapper-33 {
+    --s-xsmall: 0.625em;
+    --s-small: 1.2em;
+    --border-width: 1px;
+    --c-primary: rgb(255, 237, 36);
+    --c-primary-20-percent-opacity: rgb(255 237 36 / 20%);
+    --c-primary-10-percent-opacity: rgb(255, 237, 36 / 10%);
+    --t-base: 0.4s;
+    --t-fast: 0.2s;
+    --e-in: ease-in;
+    --e-out: cubic-bezier(.11, .29, .18, .98);
+    color: white;
+}
+
+.checkbox-wrapper-33 .visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.checkbox-wrapper-33 .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.checkbox-wrapper-33 .checkbox+.checkbox {
+    margin-top: var(--s-small);
+}
+
+.checkbox-wrapper-33 .checkbox__symbol {
+    display: inline-block;
+    display: flex;
+    margin-right: calc(var(--s-small) * 0.7);
+    border: var(--border-width) solid var(--c-primary);
+    position: relative;
+    border-radius: 0.1em;
+    width: 1.5em;
+    height: 1.5em;
+    transition: box-shadow var(--t-base) var(--e-out), background-color var(--t-base);
+    box-shadow: 0 0 0 0 var(--c-primary-10-percent-opacity);
+}
+
+.checkbox-wrapper-33 .checkbox__symbol:after {
+    content: "";
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    width: 0.25em;
+    height: 0.25em;
+    background-color: var(--c-primary-20-percent-opacity);
+    opacity: 0;
+    border-radius: 3em;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+}
+
+.checkbox-wrapper-33 .checkbox .icon-checkbox {
+    width: 1em;
+    height: 1em;
+    margin: auto;
+    fill: none;
+    stroke-width: 3;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    color: var(--c-primary);
+    display: inline-block;
+}
+
+.checkbox-wrapper-33 .checkbox .icon-checkbox path {
+    transition: stroke-dashoffset var(--t-fast) var(--e-in);
+    stroke-dasharray: 30px, 31px;
+    stroke-dashoffset: 31px;
+}
+
+.checkbox-wrapper-33 .checkbox__textwrapper {
+    margin: 0;
+}
+
+.checkbox-wrapper-33 .checkbox__trigger:checked+.checkbox__symbol:after {
+    -webkit-animation: ripple-33 1.5s var(--e-out);
+    animation: ripple-33 1.5s var(--e-out);
+}
+
+.checkbox-wrapper-33 .checkbox__trigger:checked+.checkbox__symbol .icon-checkbox path {
+    transition: stroke-dashoffset var(--t-base) var(--e-out);
+    stroke-dashoffset: 0px;
+}
+
+.checkbox-wrapper-33 .checkbox__trigger:focus+.checkbox__symbol {
+    box-shadow: 0 0 0 0.25em var(--c-primary-20-percent-opacity);
+}
+
+@-webkit-keyframes ripple-33 {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(20);
+    }
+}
+
+@keyframes ripple-33 {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(20);
+    }
 }
