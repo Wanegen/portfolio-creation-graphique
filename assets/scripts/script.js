@@ -15,6 +15,13 @@ imageFiltre.addEventListener("mouseout", () => {
     document.imageFiltre.src = "assets/images/1636037514888.jpeg";
 })
 
+const menuHamburger = document.getElementById("icon-menu")
+const navLinks = document.querySelector(".nav-links")
+
+menuHamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile-menu')
+})
+
 // Création d'une fonction pour filtrer les éléments avec l'appel d'un event (e)
 const filterToggle = (e) => {
     // On recherche tous les input étant des checkbox qui sont cochés.
