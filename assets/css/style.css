@@ -48,10 +48,6 @@ nav a {
     text-decoration: none;
 }
 
-nav a:visited {
-    color: white;
-}
-
 nav a:hover {
     color: rgb(255, 237, 36);
     text-decoration: underline;
@@ -452,6 +448,11 @@ h3 {
     gap: 2rem;
     display: flex;
     justify-content: center;
+}
+
+#description-boutons img:hover {
+    opacity: 0.8;
+    transition: all 0.1s ease-in-out;
 }
 
 #bouton-projet,

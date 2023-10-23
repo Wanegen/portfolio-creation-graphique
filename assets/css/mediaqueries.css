@@ -263,7 +263,6 @@
 
     #description h1 span:first-child {
         font-size: 1.8rem;
-        letter-spacing: normal;
         font-family: "Croissant One";
         overflow: hidden;
         color: black;
@@ -286,7 +285,7 @@
         }
 
         to {
-            width: 95%
+            width: 85%
         }
     }
 
@@ -294,7 +293,7 @@
         font-size: 1.8rem;
         letter-spacing: normal;
         text-align: center;
-        line-height: 40px;
+        line-height: 30px;
         animation: none;
         background-color: black;
         color: white;
@@ -357,8 +356,8 @@
     }
 
     #projets-titre h3 {
-        margin: 0px 20px 20px;
-        font-size: 2vw;
+        margin: 0px 30px 20px 30px;
+        font-size: 3vw;
     }
 
     #filtre-projets {
@@ -505,6 +504,7 @@
         height: auto;
         margin-bottom: 150px;
         padding-bottom: 10px;
+        z-index: 2;
     }
 
     #bloc-contact, #bloc-localisation, #bloc-mail {
@@ -674,7 +674,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.299);
+        background-color: rgba(255, 237, 36, 0.8);
         backdrop-filter: blur(10px);
         display: flex;
         justify-content: center;
@@ -693,14 +693,20 @@
         align-items: center;
     }
 
-    .nav-links a:hover {
+    nav a:hover {
+        color: black;
         text-decoration: none;
-        color: white;
     }
 
     nav a {
-        text-transform: none;
+        color: black;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bolder;
+        border: 1.5px black solid;
+        padding: 15px 30px;
     }
+
 
     .mobile-menu {
         margin-left: 0px;
