@@ -22,6 +22,13 @@ menuHamburger.addEventListener('click', () => {
     navLinks.classList.toggle('mobile-menu')
 })
 
+const btnTri = document.getElementById("titre-filtres-mobile")
+const navTri = document.getElementById("btn-container-mobile")
+
+btnTri.addEventListener('click', () => {
+    navTri.classList.toggle('mobile-menu-tri')
+})
+
 // Création d'une fonction pour filtrer les éléments avec l'appel d'un event (e)
 const filterToggle = (e) => {
     // On recherche tous les input étant des checkbox qui sont cochés.
