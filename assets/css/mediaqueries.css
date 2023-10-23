@@ -228,7 +228,7 @@
     }
 }
 
-@media screen and (min-width: 360px) and (max-width: 780px) {
+@media screen and (max-width: 780px) {
     #navbar {
         top: 0;
     }
@@ -431,9 +431,10 @@
     }
 
     .div-projet-img {
-        width: 70vw;
-        margin: 30px;
-        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin: 30px 0px 0px -5px;
     }
 
     .div-projet-img img {
@@ -528,7 +529,7 @@
     }
 
     #titre-contact h3{
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 
     #bloc-localisation,
@@ -539,6 +540,14 @@
     #bloc-localisation:hover,
     #bloc-mail:hover {
         border: none;
+    }
+
+    #bloc-contact h4{
+        font-size: 3vw;
+    }
+
+    #bloc-contact .texte-contact p{
+        font-size: 2vw;
     }
 }
 
