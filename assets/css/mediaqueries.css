@@ -685,8 +685,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(255, 237, 36, 0.8);
-        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.9);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -705,16 +704,16 @@
     }
 
     nav a:hover {
-        color: black;
+        color: rgb(255, 237, 36);
         text-decoration: none;
     }
 
     nav a {
-        color: black;
+        color: rgb(255, 237, 36);
         text-transform: uppercase;
         text-decoration: none;
         font-weight: bolder;
-        border: 1.5px black solid;
+        border: 1.5px rgb(255, 237, 36) solid;
         padding: 15px 30px;
     }
 
